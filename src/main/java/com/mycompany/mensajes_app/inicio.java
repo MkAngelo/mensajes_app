@@ -28,8 +28,22 @@ public class inicio {
             System.out.println("5. Salir");
             
             // Leer la opcion del usuario
-            
             opcion = sc.nextInt();
+            
+            switch(opcion){
+                case 1:
+                    mensajesService.crearMensaje();
+                    break;
+                case 2:
+                    mensajesService.listarMensajes();
+                    break;
+                case 3:
+                    mensajesService.editarMensaje();
+                    break;
+                case 4:
+                    mensajesService.borrarMensaje();
+                    break;
+            }
             
         }while(opcion != 5);
 
