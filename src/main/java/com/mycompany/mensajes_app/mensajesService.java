@@ -25,11 +25,14 @@ public class mensajesService {
     }
     
     public static void listarMensajes(){
-        
+        MensajesDAO.leerMensajesDB();
     }
     
     public static void borrarMensaje(){
-            
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escribe el ID del mensaje: ");
+        int id_mensajes=sc.nextInt();
+        MensajesDAO.borrarMensajesDB(id_mensajes);
     }
     
     public static void editarMensaje(){
